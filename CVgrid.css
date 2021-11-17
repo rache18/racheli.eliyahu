@@ -5,41 +5,53 @@
   .wrapper{
       content: "";
       clear: both;
-      display: block;
+      display: grid;
+      width: 100%;
+      grid-template-areas:
+      "header header header header header header"
+      "contact contact education education education education"
+      "skills skills education education education education"
+      "Army Army language language language language";
   }
 
   [class*="box-"]{
       float: left;
       padding: 15px;
   }
-    /* for desktop */
+    /* for desktop
   .box-one {width: 33.33%;}
   .box-two {width: 66.66%;}
   .box-three {width: 66.66%;}
   .box-four {width: 33.33%;}
-  .box-five {width: 100%;}
+  .box-five {width: 100%;} */
 
   .box-one {
+    grid-area: contact;
     background: #dac292; 
   }
 
   .box-two {
+    grid-area: education;
     background: #e6e2d3;
   }
 
   .box-three {
+    grid-area: skills;
     background: #c4b7a6; 
   }
 
   .box-four {
+    grid-area: Army;
     background: #dac292; 
   }
   
   .box-five {
+    grid-area: language;
     background: #b9936c;
   }
   
   .header {
+    grid-area: header;
     background: #b9936c; 
     padding: 15px;
   } 
