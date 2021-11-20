@@ -2,6 +2,16 @@
       box-sizing: border-box;
   }
 
+  @keyframes example {
+    from {background-color:#946e48 ;}
+    to {background-color: #dac7b4;}
+    }
+
+  @keyframes example2 {
+    from {background-color:#e66a6a ;}
+    to {background-color: #aa3636;}
+    }
+
   .wrapper{
       content: "";
       clear: both;
@@ -51,6 +61,8 @@
   }
   
   .header {
+    animation-name: example;
+    animation-duration: 4s;
     grid-area: header;
     background: #b9936c; 
     padding: 15px;
@@ -63,8 +75,12 @@
         background: #eea29a;
     }
     .header{
+      animation-name: example2;
+      animation-duration: 4s;
         width: 100%;
         background: #c94c4c; 
     }
+
+
 }
  
