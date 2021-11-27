@@ -17,23 +17,31 @@
       clear: both;
       display: grid;
       width: 100%;
+      height: 100vh;
       grid-template-areas:
       "header header header header header header"
       "contact contact education education education education"
-      "skills skills education education education education"
-      "Army Army language language language language";
+      "skills skills Army Army Army Army"
+      "language language form form form form"
+      "language language form form form form"
+      "language language form form form form";
   }
+
+  .header {
+    animation-name: example;
+    animation-duration: 4s;
+    grid-area: header;
+    background: #b9936c; 
+    padding: 15px;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  } 
 
   [class*="box-"]{
       float: left;
       padding: 15px;
+      font-family: cursive; 
   }
-    /* for desktop
-  .box-one {width: 33.33%;}
-  .box-two {width: 66.66%;}
-  .box-three {width: 66.66%;}
-  .box-four {width: 33.33%;}
-  .box-five {width: 100%;} */
 
   .box-one {
     grid-area: contact;
@@ -47,7 +55,7 @@
 
   .box-three {
     grid-area: skills;
-    background: #c4b7a6; 
+    background: #c4b7a6;
   }
 
   .box-four {
@@ -58,16 +66,16 @@
   .box-five {
     grid-area: language;
     background: #b9936c;
+    height: 70vh;
   }
   
-  .header {
-    animation-name: example;
-    animation-duration: 4s;
-    grid-area: header;
-    background: #b9936c; 
-    padding: 15px;
-  } 
-
+  .box-six{
+    grid-area: form;
+    background: #d6b334; 
+    height: 70vh;
+    text-align: left;
+  }
+  
   @media only screen and (max-width: 768px){
       /* for mobile */
     [class*="box-"]{
